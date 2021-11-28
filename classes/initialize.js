@@ -4,7 +4,6 @@ import { Views } from "./views.js"
 import { Randos } from "./randomClass.js"
 import { monsterWar } from "./monsterWar.js"
 import { Monsters } from "./monsterClass.js"
-import { Heroes } from "./heroClass.js"
 import { GameState } from "./gameState.js"
 import { Attack } from "./attackClass.js"
 

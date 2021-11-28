@@ -69,12 +69,13 @@ export class Views {
                 this.playerHp.textContent = state.player.getHP()
                 state.loseLife()
                 this.playerLives.textContent = state.currentLives()
-                this.resetReport()
+                this.resetLOSSRepert()
             } else {
                 this.loss.classList.remove('visibility')
                 this.loseSound.play()
                 state.resetLossLevel()
                 this.characterselection.classList.remove('visibility')
+                this.resetReport()
             }
         } else {
             this.playerHp.textContent = state.player.getHP()
@@ -85,7 +86,7 @@ export class Views {
             checkArr.push(element.getHP())
         }
         if (checkArr[0] === 0 && checkArr[1] === 0 && checkArr[2] === 0) {
-            this.resetReport()
+            this.resetWINReport()
             state.player.resetHP()
             state.player.xp = state.XP()
             this.playerXp.textContent = state.player.getXP()
@@ -134,6 +135,12 @@ export class Views {
         }
     }
     resetReport(){
-        this.report.innerHTML = '<div class="combat-text" id="combat-text"></div>'
+        this.report.innerHTML = '<p>This Is The Beginning Of The Game</p>'
+    }
+    resetWINReport(){
+        this.report.innerHTML = '<p>You WON The Last Round. Good Luck On This One</p>'
+    }
+    resetLOSSRepert(){
+        this.report.innerHTML = '<p>You Lost The Last Round. Good Luck On This One</p>'
     }
 }

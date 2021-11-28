@@ -1,5 +1,5 @@
 import { Initialize } from "./classes/initialize.js";
-import { players } from "../playerCharacter.js"
+// import { players } from "./playerCharacter.js"
 
 const quest = new Initialize
 quest.loadMonsters()
@@ -94,11 +94,11 @@ reset[0].addEventListener('click', () => {
     quest.refreshMonsters()
     characterselection.classList.remove('visibility')
     quest.view.win.classList.add('visibility')
-    quest.view.report.innerHTML = '<div class="combat-text" id="combat-text"></div>'
+    // quest.view.report.innerHTML = '<div class="combat-text" id="combat-text"></div>'
 }) 
 reset[1].addEventListener('click', () => {
     quest.refreshMonsters()
     characterselection.classList.remove('visibility')
     quest.view.loss.classList.add('visibility')
-    quest.view.report.innerHTML = '<div class="combat-text" id="combat-text"></div>'
+    // quest.view.report.innerHTML = '<div class="combat-text" id="combat-text"></div>'
 }) 
