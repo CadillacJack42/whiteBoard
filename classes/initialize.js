@@ -30,7 +30,6 @@ export class Initialize{
         return this.monsters
     }
     refreshMonsters(){
-        console.log(this.monsters);
         this.monsters = []
         let enemies = this.monsterCall.getLvlMonsters(this.state.currentLevel())
         for (let i = 0; i < enemies.length; i++) {
@@ -38,7 +37,6 @@ export class Initialize{
             let enemy = new Monsters(element)
             this.monsters.push(enemy)
         }
-        console.log(this.monsters);
         return this.monsters
     }
 }
